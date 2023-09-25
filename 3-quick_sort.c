@@ -1,6 +1,6 @@
 #include "sort.h"
 
-void swaping_integrs(int *j, int *z);
+void swaping_integrs(int *j, int *i);
 int custom_partition(int *array, size_t size, int left, int right);
 void quick_sort_lomuto(int *array, size_t size, int left, int right);
 void quick_sort(int *array, size_t size);
@@ -10,14 +10,14 @@ void quick_sort(int *array, size_t size);
  *
  * @j: the initial swapped integer.
  *
- * @z: The next integer to be swapped.
+ * @i: The next integer to be swapped.
  */
-void swaping_integrs(int *j, int *z)
+void swaping_integrs(int *j, int *i)
 {
 int tmp;
 tmp = *j;
-*j = *z;
-*z = tmp;
+*j = *i;
+*i = tmp;
 }
 
 /**
