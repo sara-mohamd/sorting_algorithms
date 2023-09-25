@@ -1,27 +1,23 @@
-#include <stdio.h>
 #include <stdlib.h>
-
+#include <stdio.h>
 
 /**
- * print_array - displays a list of integers
+ * print_array - Prints an array of integers
  *
- * @array: The list of items to print
- * 
- * @size: Elements in @array, number
+ * @array: The array to be printed
+ * @size: Number of elements in @array
  */
-void print_array(const int *array,
-size_t size)
+void print_array(const int *array, size_t size)
 {
-size_t i;
+    size_t i;
 
-i = 0;
-while (array &&
-i < size)
-{
-if (i > 0)
-printf(", ");
-printf("%d", array[i]);
-++i;
-}
-printf("\n");
+    i = 0;
+    while (array && i < size)
+    {
+        if (i > 0)
+            printf(", ");
+        printf("%d", array[i]);
+        ++i;
+    }
+    printf("\n");
 }
