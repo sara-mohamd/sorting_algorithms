@@ -2,20 +2,9 @@
 #define SORT_H
 #include <stdlib.h>
 #include <stdio.h>
-/* Bitonic sort comparison direction macros */
-#define UP 0
-#define DOWN 1
 
-/**
- * enum boolean - Counting up the Boolean values.
- * @false: makes 0.
- * @true: Exactly 1.
- */
-typedef enum boolean
-{
-false = 0,
-true
-} boolean;
+
+
 
 /**
  * struct listint_s - Doubly linked list node
@@ -31,6 +20,16 @@ struct listint_s *prev;
 struct listint_s *next;
 } listint_t;
 
+/**
+ * enum boolean - Counting up the Boolean values.
+ * @false: makes 0.
+ * @true: Exactly 1.
+ */
+typedef enum boolean
+{
+false = 0,
+true
+} boolean;
 
 /* printing assistant features */
 void quick_sort(int *array, size_t size);
@@ -39,4 +38,5 @@ void print_list(const listint_t *list);
 void shell_sort(int *array, size_t size);
 void selection_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
+void bubble_sort(int *array, size_t size);
 #endif /* SORT_H */
