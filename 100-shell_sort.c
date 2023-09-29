@@ -12,10 +12,10 @@
 void swaping_integers(int *j, int *i)
 {
 
-int tmp;
-tmp = *j;
+int temp1;
+temp1 = *j;
 *j = *i;
-*i = tmp;
+*i = temp1;
 
 }
 

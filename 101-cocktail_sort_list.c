@@ -14,24 +14,24 @@ void swop_node_ahood(listint_t **list, listint_t **tail, listint_t **shoker);
  */
 void swop_node_ahood(listint_t **list, listint_t **tail, listint_t **shoker)
 {
-listint_t *tmp = (*shoker)->next;
+listint_t *temp1 = (*shoker)->next;
 
 if ((*shoker)->prev
 != NULL)
-(*shoker)->prev->next = tmp;
+(*shoker)->prev->next = temp1;
 else
-*list = tmp;
-tmp->prev = (*shoker)->prev;
-(*shoker)->next = tmp->next;
-if (tmp->next != NULL)
-tmp->next->prev =
+*list = temp1;
+temp1->prev = (*shoker)->prev;
+(*shoker)->next = temp1->next;
+if (temp1->next != NULL)
+temp1->next->prev =
 *shoker;
 else
 *tail = *shoker;
-(*shoker)->prev = tmp;
-tmp->next =
+(*shoker)->prev = temp1;
+temp1->next =
 *shoker;
-*shoker = tmp;
+*shoker = temp1;
 }
 
 /**
@@ -43,22 +43,22 @@ tmp->next =
  */
 void swop_node_behnnd(listint_t **list, listint_t **tail, listint_t **shoker)
 {
-listint_t *tmp = (*shoker)->prev;
+listint_t *temp1 = (*shoker)->prev;
 
 if ((*shoker)->next != NULL)
-(*shoker)->next->prev = tmp;
+(*shoker)->next->prev = temp1;
 else
-*tail = tmp;
-tmp->next = (*shoker)->next;
-(*shoker)->prev = tmp->prev;
-if (tmp->prev != NULL)
-tmp->prev->next =
+*tail = temp1;
+temp1->next = (*shoker)->next;
+(*shoker)->prev = temp1->prev;
+if (temp1->prev != NULL)
+temp1->prev->next =
 *shoker;
 else
 *list = *shoker;
-(*shoker)->next = tmp;
-tmp->prev = *shoker;
-*shoker = tmp;
+(*shoker)->next = temp1;
+temp1->prev = *shoker;
+*shoker = temp1;
 }
 
 /**

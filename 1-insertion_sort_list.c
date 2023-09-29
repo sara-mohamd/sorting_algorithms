@@ -35,15 +35,15 @@ else
  */
 void insertion_sort_list(listint_t **list)
 {
-listint_t *item, *ele1, *tmp;
+listint_t *item, *ele1, *temp1;
 
 if (list == NULL || *list == NULL ||
 (*list)->next == NULL)
 return;
 
-for (item = (*list)->next; item != NULL; item = tmp)
+for (item = (*list)->next; item != NULL; item = temp1)
 {
-tmp = item->next;
+temp1 = item->next;
 ele1 = item->prev;
 while (ele1 != NULL && item->n < ele1->n)
 {

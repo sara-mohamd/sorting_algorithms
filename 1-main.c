@@ -14,7 +14,7 @@ listint_t *create_listint(const int *array, size_t size)
 {
     listint_t *list;
     listint_t *node;
-    int *tmp;
+    int *temp1;
 
     list = NULL;
     while (size--)
@@ -22,8 +22,8 @@ listint_t *create_listint(const int *array, size_t size)
         node = malloc(sizeof(*node));
         if (!node)
             return (NULL);
-        tmp = (int *)&node->n;
-        *tmp = array[size];
+        temp1 = (int *)&node->n;
+        *temp1 = array[size];
         node->next = list;
         node->prev = NULL;
         list = node;

@@ -14,10 +14,10 @@ void quick_sort(int *array, size_t size);
  */
 void swaping_integrs(int *j, int *i)
 {
-int tmp;
-tmp = *j;
+int temp1;
+temp1 = *j;
 *j = *i;
-*i = tmp;
+*i = temp1;
 }
 
 /**

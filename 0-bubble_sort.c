@@ -11,11 +11,11 @@
 
 void swaping_integrs(int *j, int *i)
 {
-int tmp;
+int temp1;
 
-tmp = *j;
+temp1 = *j;
 *j = *i;
-*i = tmp;
+*i = temp1;
 }
 
 /**
