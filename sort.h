@@ -32,6 +32,7 @@ true
 } boolean;
 
 /* printing assistant features */
+void heap_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **varr1);
 void counting_sort(int *array, size_t size);
