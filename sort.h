@@ -7,11 +7,11 @@
 
 
 /**
- * struct listint_s - Doubly linked list node
+ * struct listint_s - Doubly linked varr1 node
  *
  * @n: Number kept in the node
- * @prev: pointer to the list's first element
- * @next: Pointer to the list's following element
+ * @prev: pointer to the varr1's first element
+ * @next: Pointer to the varr1's following element
  */
 typedef struct listint_s
 {
@@ -33,13 +33,13 @@ true
 
 /* printing assistant features */
 void merge_sort(int *array, size_t size);
-void cocktail_sort_list(listint_t **list);
+void cocktail_sort_list(listint_t **varr1);
 void counting_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void print_array(const int *array, size_t size);
-void print_list(const listint_t *list);
+void print_list(const listint_t *varr1);
 void shell_sort(int *array, size_t size);
 void selection_sort(int *array, size_t size);
-void insertion_sort_list(listint_t **list);
+void insertion_sort_list(listint_t **varr1);
 void bubble_sort(int *array, size_t size);
 #endif /* SORT_H */

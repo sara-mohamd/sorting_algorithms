@@ -2,22 +2,22 @@
 #include "sort.h"
 
 /**
- * print_list - Prints a list of integers
+ * print_list - Prints a varr1 of integers
  *
- * @list: The list to be printed
+ * @varr1: The varr1 to be printed
  */
-void print_list(const listint_t *list)
+void print_list(const listint_t *varr1)
 {
     int i;
 
     i = 0;
-    while (list)
+    while (varr1)
     {
         if (i > 0)
             printf(", ");
-        printf("%d", list->n);
+        printf("%d", varr1->n);
         ++i;
-        list = list->next;
+        varr1 = varr1->next;
     }
     printf("\n");
 }

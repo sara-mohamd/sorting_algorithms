@@ -1,8 +1,9 @@
 #include "sort.h"
 
-void swop_node_ahood(listint_t **list, listint_t **tail, listint_t **shoker);
+
 void swop_node_behnnd(listint_t **list, listint_t **tail, listint_t **shoker);
 void cocktail_sort_list(listint_t **list);
+void swop_node_ahood(listint_t **list, listint_t **tail, listint_t **shoker);
 
 /**
  * swop_node_ahood - Swap a is node Replace doubly-linked list listint_t
@@ -22,8 +23,7 @@ else
 *list = tmp;
 tmp->prev = (*shoker)->prev;
 (*shoker)->next = tmp->next;
-if (tmp->next !=
-NULL)
+if (tmp->next != NULL)
 tmp->next->prev =
 *shoker;
 else
@@ -45,15 +45,13 @@ void swop_node_behnnd(listint_t **list, listint_t **tail, listint_t **shoker)
 {
 listint_t *tmp = (*shoker)->prev;
 
-if ((*shoker)->next !=
-NULL)
+if ((*shoker)->next != NULL)
 (*shoker)->next->prev = tmp;
 else
 *tail = tmp;
 tmp->next = (*shoker)->next;
 (*shoker)->prev = tmp->prev;
-if (tmp->prev !=
-NULL)
+if (tmp->prev != NULL)
 tmp->prev->next =
 *shoker;
 else

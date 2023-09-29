@@ -3,20 +3,20 @@
 #include "sort.h"
 
 /**
- * create_listint - Creates a doubly linked list from an array of integers
+ * create_listint - Creates a doubly linked varr1 from an array of integers
  *
- * @array: Array to convert to a doubly linked list
+ * @array: Array to convert to a doubly linked varr1
  * @size: Size of the array
  *
- * Return: Pointer to the first element of the created list. NULL on failure
+ * Return: Pointer to the first element of the created varr1. NULL on failure
  */
 listint_t *create_listint(const int *array, size_t size)
 {
-    listint_t *list;
+    listint_t *varr1;
     listint_t *node;
     int *tmp;
 
-    list = NULL;
+    varr1 = NULL;
     while (size--)
     {
         node = malloc(sizeof(*node));
@@ -24,13 +24,13 @@ listint_t *create_listint(const int *array, size_t size)
             return (NULL);
         tmp = (int *)&node->n;
         *tmp = array[size];
-        node->next = list;
+        node->next = varr1;
         node->prev = NULL;
-        list = node;
-        if (list->next)
-            list->next->prev = list;
+        varr1 = node;
+        if (varr1->next)
+            varr1->next->prev = varr1;
     }
-    return (list);
+    return (varr1);
 }
 
 /**
@@ -40,17 +40,17 @@ listint_t *create_listint(const int *array, size_t size)
  */
 int main(void)
 {
-    listint_t *list;
+    listint_t *varr1;
     int array[] = {19, 48, 99, 71, 13, 52, 96, 73, 86, 7};
     size_t n = sizeof(array) / sizeof(array[0]);
 
-    list = create_listint(array, n);
-    if (!list)
+    varr1 = create_listint(array, n);
+    if (!varr1)
         return (1);
-    print_list(list);
+    print_list(varr1);
     printf("\n");
-    cocktail_sort_list(&list);
+    cocktail_sort_list(&varr1);
     printf("\n");
-    print_list(list);
+    print_list(varr1);
     return (0);
 }
